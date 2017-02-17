@@ -1,0 +1,241 @@
+#
+# This file is based on the current x11vnc settings and can be used as
+# as a ~/.x11vncrc defaults file.  If saved to another filename, these
+# settings can be passed to x11vnc at startup via "-rc <filename>".
+#
+# The rc file comment character is "#".  Use "\#" for the literal char.
+# You can continue lines using "\" as the last character of a line.
+#
+# Lines beginning with "#d" indicate the parameter value is at its default
+# setting and you probably want to leave it commented out.
+#
+# Lines beginning with "#?" indicate parameters you probably do not
+# want to hardwire to the current setting (uncomment if you want that).
+# 
+# Some parameters are boolean, e.g. -forever, and take no value; while
+# the others, e.g. -wait 50, take a string or numerical value.
+#
+# For booleans, the line will end with comment "default: on" or
+# "default: off" indicating the default setting.  (Note: often
+# "-nofoobar" corresponds to option "-foobar" and the former is
+# "the default", e.g. -norepeat).
+#
+# For string or numerical options, the value "" in a line below
+# means the default is unset and you will need to supply some non-empty
+# value to use the parameter.  For reference, if the default differs
+# from your value it placed at the end of the line as a comment.
+# 
+# Feel free to uncomment or comment any of the lines or to change any
+# of the values of the parameters.  Don't be surprised that most if not
+# all of the lines below are commented out (x11vnc has so many parameters,
+# most of them will be at their default values).
+#-------------------------------------------------------------------------
+
+# GUI fonts
+-env X11VNC_FONT_BOLD=Helvetica 11 bold     # main font for menus and buttons
+-env X11VNC_FONT_FIXED=Helvetica 11         # fixed width text
+-env X11VNC_FONT_BOLD_SMALL=Helvetica 8     # tray icon font
+-env X11VNC_FONT_REG_SMALL=Helvetica 11     # tray icon menu font
+
+#d -24to32			# default: off
+#? -6				# default: on
+#d -8to24			# default: off
+-accept popup			# ensure the session is explicity accepted or refused by the user
+#d -add_keysyms			# default: on
+#d -afteraccept ""
+#d -allinput			# default: off
+#d -allow ""
+#? -alphacut ""			# default:  240
+#? -alphafrac ""		# default:  0.330000
+#d -alpharemove			# default: off
+#d -always_inject		# default: off
+#? -arrow ""			# default:  1
+#d -auth ""
+#? -autoport ""			# default:  0
+#d -bg				# default: off
+-bg				# run as a background process
+#d -blackout ""
+#d -buttonmap ""
+#d -capslock			# default: off
+-chatwindow			# enable text chat
+#d -clear_all			# default: off
+#d -clear_keys			# default: off
+#d -clear_mods			# default: off
+#d -clientdpms			# default: off
+#d -clip ""
+#d -connect ""
+#d -cursor most
+#d -cursor_drag			# default: off
+#d -cursorpos			# default: on
+#d -dbg 			# default: off
+#d -debug_grabs			# default: off
+#d -debug_keyboard		# default: off
+#d -debug_ncache		# default: off
+#d -debug_pointer		# default: off
+#d -debug_scroll		# default: off
+#d -debug_sel			# default: off
+#d -debug_tiles			# default: off
+#? -debug_wireframe ""		# default:  0
+#? -defer ""			# default:  20
+#d -desktop ""			# default:  ""
+#d -display ""			# default:  ""
+-display :0			# ensure display 0 is used
+#d -enablehttpproxy		# default: off
+#d -enc ""
+#? -extra_fbur ""		# default:  1
+#d -fixscreen ""
+#d -flashcmap			# default: off
+#d -flipbyteorder		# default: off
+#d -forcedpms			# default: off
+#d -forever			# default: off
+#? -fs ""			# default:  0.750000
+#? -fuzz ""			# default:  2
+#? -gaps ""			# default:  4
+#d -gone ""
+#d -grabalways			# default: off
+#d -grabkbd			# default: off
+#d -grabptr			# default: off
+#? -grow ""			# default:  3
+-gui simple,tray		# disable showing advanced options in the gui, place icon in taskbar
+#d -http			# default: off
+#d -httpdir ""
+#? -httpport ""			# default:  0
+#? -https ""			# default:  -1
+#? -httpsredir ""		# default:  0
+#? -id ""			# default:  0x0
+#d -input ""
+#? -input_skip ""		# default:  10
+#d -listen ""
+#d -localhost			# default: off
+#d -logfile ""			# to modify edit location specifed in 1-to-1_assistance.sh
+#? -maciconanim ""		# default:  450
+#d -macmenu			# default: off
+#d -macnoresize			# default: off
+#d -macnosaver			# default: off
+#d -macnoswap			# default: off
+#d -macnowait			# default: off
+#? -macwheel ""			# default:  5
+#d -modtweak			# default: on
+#d -nap				# default: on
+#? -ncache			# default: on
+#d -ncache_cr			# default: off
+#d -ncache_keep_anims		# default: off
+#d -ncache_no_dtchange		# default: off
+#d -ncache_no_moveraise		# default: off
+#d -ncache_no_rootpixmap	# default: off
+#d -ncache_old_wm		# default: off
+#? -ncache_pad ""		# default:  0
+#d -noalphablend		# default: off
+#d -nobell			# default: off
+#d -noclipboard			# default: off
+#d -nocursorshape		# default: off
+#d -nodpms			# default: off
+#d -nodragging			# default: off
+#d -nofb			# default: off
+#d -nofbpm			# default: off
+#d -noipv4			# default: off
+#d -noipv6			# default: off
+#d -nolookup			# default: off
+#d -noprimary			# default: off
+-nopw				# disable warning message that a password is not being used 
+#d -norepeat			# default: on
+#d -nosel			# default: off
+#d -noserverdpms		# default: off
+#d -nosetclipboard		# default: off
+#d -nosetprimary		# default: off
+#d -noshm			# default: off
+#d -notruecolor			# default: off
+#d -noultraext			# default: off
+#d -nowait_bog			# default: off
+#d -noxfixes			# default: off
+#d -noxrecord			# default: off
+#d -onetile			# default: off
+#d -overlay			# default: off
+#? -overlay_nocursor		# default: off
+#d -padgeom ""
+#d -passwd ""
+#d -passwdfile ""
+#d -pipeinput ""
+#d -pointer_mode 2
+#? -progressive ""		# default:  0
+#d -proxy ""
+#d -quiet			# default: off
+#d -rawfb ""
+#? -readtimeout ""		# default:  20
+#d -reflect ""
+#d -remap ""
+#d -rfbauth ""
+#d -rfbport 5900		# default:  5900
+-rfbport 0			# disable listening on any interface (listening not wanted in reverse mode using connect_or_exit)
+#? -rfbversion ""		# default:  3.8
+#d -rfbwait ""
+#d -rotate ""
+#d -safer			# default: off
+#d -scale ""
+#d -scale_cursor ""
+#? -scr_area ""			# default:  60000
+#? -scr_inc ""			# default:  \#\#Nomatch
+#? -scr_keyrepeat ""		# default:  4-20
+#d -scr_keys ""
+#? -scr_parms ""		# default:  0+64+32+32,0.02+0.10+0.9,0.03+0.06+0.5+0.1+5.0
+#? -scr_skip ""			# default:  \#\#Soffice.bin,\#\#StarOffice,\#\#OpenOffice
+#? -scr_term ""			# default:  term
+#? -sb ""			# default:  60
+#? -scrollcopyrect ""		# default:  always
+#d -seldir ""
+#? -setdefer ""			# default:  1
+#d -shared			# default: off
+#? -shiftcmap ""		# default:  0
+#? -sid ""			# default:  0x0
+#d -sigpipe ""
+#d -skip_dups			# default: off
+#d -skip_keycodes ""
+#d -skip_lockkeys		# default: off
+#d -sleepin ""
+#d -sloppy_keys			# default: off
+#? -slow_fb ""			# default:  0.00
+#d -snapfb			# default: off
+#d -solid			# default: off
+#d -solid ""
+#d -speeds ""
+#d -ssl				# default: off
+-ssl				# ensure ssl is used to encrypt the connection
+-sslonly			# ensure only standard ssl tunneling is used
+#d -ssldir ""
+#? -ssltimeout ""		# default:  -1
+#d -sslverify ""
+#d -stunnel			# default: off
+#d -stunnel ""
+#d -threads			# default: off
+#d -tightfilexfer		# default: off
+#? -timeout ""			# default:  0
+#d -ultrafilexfer		# default: off
+-ultrafilexfer			# enable file transfer
+#d -unixpw			# default: off
+#d -unixpw ""
+#d -unixpw_nis			# default: off
+#d -unixpw_nis ""
+#d -unsafe			# default: off
+#d -usepw			# default: off
+#d -viewonly			# default: off
+#d -viewpasswd ""
+#d -visual ""
+#d -vncconnect			# default: on
+#d -wait 20
+#? -wait_ui ""			# default:  2.00
+#? -wirecopyrect ""		# default:  always
+#d -wireframe			# default:  on
+#? -wireframe ""		# default:  0xff,2,0,32+8+8+8,all,0.15+0.30+5.0+0.125
+#d -wmdt ""
+#? -xd_area ""			# default:  20000
+#? -xd_mem ""			# default:  1.000
+#d -xdamage			# default: on
+#d -xinerama			# default: on
+#d -xkb				# default: off
+#d -xrandr			# default: off
+#d -xrandr ""
+#? -xrefresh ""			# default:  0.00
+#d -xtrap			# default: off
+#d -xwarppointer		# default: off
+#d -zeroconf			# default: off
+

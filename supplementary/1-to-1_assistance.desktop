@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=1-to-1 Assistance
+Comment=Share the local or a remote desktop via SSL enabled VNC
+Exec=1-to-1_assistance.sh
+Icon=1-to-1_assistance.png
+Terminal=false
+Type=Application
+StartupNotify=false
+NoDisplay=False
+Categories=Network;RemoteAccess;

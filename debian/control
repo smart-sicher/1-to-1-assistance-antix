@@ -1,0 +1,15 @@
+Source: 1-to-1-assistance-antix
+Section: system
+Priority: optional
+Maintainer: anticapitalista <antix@operamail.com>
+Build-Depends: debhelper (>= 9.20120115)
+Standards-Version: 3.9.4
+Homepage: http://antix.mepis.org
+
+Package: 1-to-1-assistance-antix
+Architecture: all
+Depends: yad, default-jre, ssvnc, x11vnc, stunnel4
+Description: A simple way to privately share the desktop of one system with another system.
+
+
+

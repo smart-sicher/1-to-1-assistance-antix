@@ -1,0 +1,7 @@
+#!/bin/sh
+set -e
+# Add entry to antiX FAQ
+sed -i '/<tr><td><\/td><\/tr>/i\  <tr><td><a href="1-to-1_assistance.html">1-to-1 Assistance</a></td><td> </td></tr>' /usr/share/antiX/FAQ/index.html
+
+
+# End automatically added section
