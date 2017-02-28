@@ -5,7 +5,7 @@
 PROGNAME=${0##*/}
 
 # Set the version number
-PROGVERSION=1.0
+PROGVERSION=1.2
 
 
 
@@ -80,6 +80,29 @@ if [[ "$0" = "$BASH_SOURCE" ]]; then
 fi
 
 
+
+# -----------------------------------------------------------------------------
+# Ensure provide mode configuration files exist in the user home file structure
+# -----------------------------------------------------------------------------
+
+# When the profile is not present
+if [[ ! -f $HOME/.vnc/profiles/$PROFILE ]]; then
+   
+   # Ensure the destination directory is present
+   mkdir --parents  $HOME/.vnc/profiles
+   
+   # Put a copy of the profile in place
+   cp /etc/skel/.vnc/profiles/$PROFILE  $HOME/.vnc/profiles/$PROFILE
+fi
+
+# When the global settings for all SSVNC Viewers is not present
+if [[ ! -f $HOME/.ssvncrc ]]; then
+   
+   # Put a copy of the global settings in place
+   cp /etc/skel/.ssvncrc  $HOME/.ssvncrc
+fi
+
+ 
 
 # ----------------------------------------------------
 # Listen for incoming connection request from a server

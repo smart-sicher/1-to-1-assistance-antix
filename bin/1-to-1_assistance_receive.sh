@@ -4,7 +4,7 @@
 PROGNAME=${0##*/}
 
 # Set the version number
-PROGVERSION=1.0
+PROGVERSION=1.2
 
 
 
@@ -76,6 +76,19 @@ if [[ "$0" = "$BASH_SOURCE" ]]; then
    # Exit the script
    clear
    exit 1
+fi
+
+
+
+# -----------------------------------------------------------------------------
+# Ensure receive mode configuration file exists in the user home file structure
+# -----------------------------------------------------------------------------
+
+# When the settings for the X11VNC Server is not present
+if [[ ! -f $HOME/.1-to-1_assistance_receive_rc ]]; then
+   
+   # Put a copy of the server settings in place
+   cp /etc/skel/.1-to-1_assistance_receive_rc  $HOME/.1-to-1_assistance_receive_rc
 fi
 
 

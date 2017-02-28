@@ -5,7 +5,7 @@
 PROGNAME=${0##*/}
 
 # Set the version number
-PROGVERSION=1.0
+PROGVERSION=1.2
 
 
 
@@ -89,7 +89,7 @@ fi
 # ---------------
 
 # Location of the lock file used to ensure only a single instance of the script is run
-LOCK_FILE=/tmp/infill.lock
+LOCK_FILE=/tmp/1-to-1_assistance.lock
 
 # Title in the titlebar of YAD windows
 WINDOW_TITLE="1-to-1 Assistance"
