@@ -1,5 +1,0 @@
-#!/bin/sh
-set -e
-# Remove entry to antiX FAQ
-sed -i '/1-to-1_assistance.html/d' /usr/share/antiX/FAQ/index.html
-# End automatically added section

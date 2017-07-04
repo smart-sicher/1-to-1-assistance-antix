@@ -1,0 +1,8 @@
+#!/bin/sh
+
+set -e
+
+echo "NoDisplay=True" >> /usr/share/applications/x11vnc.desktop
+echo "NoDisplay=True" >> /usr/share/applications/ssvnc.desktop
+echo "NoDisplay=True" >> /usr/share/applications/debian-uxterm.desktop
+echo "NoDisplay=True" >> /usr/share/applications/debian-xterm.desktop
