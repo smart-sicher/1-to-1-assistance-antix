@@ -1,3 +1,10 @@
+1-to-1-assistance-antix (1.2) unstable; urgency=medium
+
+  * Updated doc for antiX17 
+  * Match deb version with app version
+
+ -- anticapitalista <antix@operamail.com>  Sun, 29 Oct 2017 11:13:13 +0200
+
 1-to-1-assistance-antix (0.1.2.3) unstable; urgency=low 
  
   * Use upper case False in NoDisplay=True 1-to-1_assistance.desktop
