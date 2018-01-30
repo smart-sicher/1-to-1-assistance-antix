@@ -1,3 +1,9 @@
+1-to-1-assistance-antix (1.2.2) unstable; urgency=medium
+
+  * removed desktop fixes
+
+ -- anticapitalista <antix@operamail.com>  Mon, 29 Jan 2018 20:04:20 +0200
+
 1-to-1-assistance-antix (1.2.1) unstable; urgency=medium
 
   * Localized .desktop files
