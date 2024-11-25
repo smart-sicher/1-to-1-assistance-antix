@@ -70,8 +70,7 @@ Environment:
    
 Requires:
    1-to-1_assistance_receive.sh, 1-to-1_assistance_provide.sh
-   ssvnc, x11vnc, default-jre
-   bash, flock, grep, sleep, tail, unxrandr, xrandr, yad
+   ssvnc, x11vnc, bash, flock, grep, sleep, tail, unxrandr, xrandr, yad
 
 References:
    Two excellent works by Karl J. Runge
