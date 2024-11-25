@@ -1,3 +1,9 @@
+1-to-1-assistance-antix (1.2.6) unstable; urgency=low 
+ 
+  * Removed default-jre dependency and compatibility level 9 warning
+
+ -- smart-sicher <http://aika.bplaced.net>  Mon, 25 Nov 2024 15:37:00 +0200
+
 1-to-1-assistance-antix (1.2.2) unstable; urgency=medium
 
   * removed desktop fixes
