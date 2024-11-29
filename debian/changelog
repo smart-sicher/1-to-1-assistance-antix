@@ -1,3 +1,9 @@
+1-to-1-assistance-antix (1.2.7) unstable; urgency=medium 
+ 
+  * Changed for vinagre and x11vnc password
+
+ -- smart-sicher <http://aika.bplaced.net>  Mon, 29 Nov 2024 02:01:00 +0200
+
 1-to-1-assistance-antix (1.2.6) unstable; urgency=low 
  
   * Removed default-jre dependency and compatibility level 9 warning
