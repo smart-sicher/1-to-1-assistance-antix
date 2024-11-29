@@ -8,7 +8,7 @@ Homepage: https://github.com/antiX-Linux/1-to-1-assistance-antix
 
 Package: 1-to-1-assistance-antix
 Architecture: all
-Depends: yad, ssvnc, x11vnc, stunnel4
+Depends: yad, vinagre, x11vnc, stunnel4
 Description: A simple way to privately share the desktop of one system with another system.
 
 
