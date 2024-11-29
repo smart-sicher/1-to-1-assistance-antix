@@ -1,3 +1,9 @@
+1-to-1-assistance-antix (1.2.8) unstable; urgency=medium 
+ 
+  * Add VNC_PASSWORD query
+
+ -- smart-sicher <http://aika.bplaced.net>  Mon, 29 Nov 2024 04:04:00 +0200
+
 1-to-1-assistance-antix (1.2.7) unstable; urgency=medium 
  
   * Changed for vinagre and x11vnc password
