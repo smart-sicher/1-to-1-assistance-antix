@@ -193,7 +193,7 @@ do
    [[ "$EXIT_STATUS" = "1" ]] || [[ "$EXIT_STATUS" = "252" ]] && exit 1
                     
    # Request a connection to the viewer system
-   x11vnc -rc $CONFIG -connect_or_exit $PROVIDER_ADDRESS -o $LOG
+   x11vnc -connect_or_exit $PROVIDER_ADDRESS -rfbauth ~/.vnc/passwd -o $LOG
    
    # Pause to enable the log to be updated, then check whether connection was successfully established
    sleep 3
