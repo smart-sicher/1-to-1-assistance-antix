@@ -109,4 +109,4 @@ fi
 # ----------------------------------------------------
 
 # Launch in listening mode
-ssvnc -nv -nvb -enc $PROFILE
+vinagre %U
