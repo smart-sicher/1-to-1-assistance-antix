@@ -109,4 +109,4 @@ fi
 # ----------------------------------------------------
 
 # Launch in listening mode
-vinagre %U
+vinagre
