@@ -175,14 +175,34 @@ fi
 # Ensure an encryted tunnel is operating
 while [[ "$SSL_CONNECTION_STATUS" = "" ]]
 do
+   # Message to display in the password input window
+   LABEL_MSG_1=" Insert the vnc password "
+   
+   # Display a window in which to input the address of the viewer system
+   VNC_PASSWORD=$(yad                          \
+                      --center                     \
+                      --entry                      \
+                      --entry-label="$LABEL_MSG_1" \
+                      --buttons-layout="center"    \
+                      --title="$WINDOW_TITLE")
+   
+   # Capture which button was selected
+   EXIT_STATUS=$?
+
+   # Check whether user cancelled or closed the window and if so exit
+   [[ "$EXIT_STATUS" = "1" ]] || [[ "$EXIT_STATUS" = "252" ]] && exit 1
+                    
+   # Request a connection to the viewer system
+   x11vnc -storepasswd $VNC_PASSWORD ~/.vnc/passwd
+   
    # Message to display in the address input window
-   LABEL_MSG_1=" IP Address of 1-to-1 Assistance Provider "
+   LABEL_MSG_2=" IP Address of 1-to-1 Assistance Provider "
    
    # Display a window in which to input the address of the viewer system
    PROVIDER_ADDRESS=$(yad                          \
                       --center                     \
                       --entry                      \
-                      --entry-label="$LABEL_MSG_1" \
+                      --entry-label="$LABEL_MSG_2" \
                       --buttons-layout="center"    \
                       --title="$WINDOW_TITLE")
    
