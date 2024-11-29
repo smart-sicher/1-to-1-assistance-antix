@@ -192,7 +192,7 @@ do
    # Check whether user cancelled or closed the window and if so exit
    [[ "$EXIT_STATUS" = "1" ]] || [[ "$EXIT_STATUS" = "252" ]] && exit 1
                     
-   # Request a connection to the viewer system
+   # Request a password for x11vnc server
    x11vnc -storepasswd $VNC_PASSWORD ~/.vnc/passwd
    
    # Message to display in the address input window
