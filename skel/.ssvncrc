@@ -1,5 +1,0 @@
-# main font for menus and buttons
-font_default=helvetica 11
-
-# fixed width text such as help information
-font_fixed=helvetica 11
