@@ -20,7 +20,7 @@ if [[ "$1" = '-h' ]] || [[ "$1" = '--help' ]]; then
 cat << end-of-messageblock
 
 $PROGNAME version $PROGVERSION
-Starts SSVNC Viewer in reverse listening mode awaiting a connection 
+Starts Vinagre VNC Viewer in reverse listening mode awaiting a connection 
 request from an X11VNC Server. 
 
 Usage: 
