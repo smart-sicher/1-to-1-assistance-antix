@@ -20,7 +20,7 @@ cat << end-of-messageblock
 
 $PROGNAME version $PROGVERSION
 Starts X11VNC Server in a mode prepared to make a connection request to
-an SSVNC Viewer that is waiting in reverse listening mode.
+Vinagre VNC Viewer that is waiting in reverse listening mode.
 
 Usage: 
    $PROGNAME [options]
