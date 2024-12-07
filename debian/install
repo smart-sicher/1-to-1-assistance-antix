@@ -1,8 +1,0 @@
-bin/*                          /usr/local/bin  
-1-to-1_assistance_provide.vnc  /etc/skel/.vnc/profiles
-skel/.1-to-1_assistance_receive_rc_  /etc/skel
-skel/.1-to-1_assistance_receive_rc   /etc/skel
-icon/*	                       /usr/share/pixmaps
-1-to-1_assistance.desktop      /usr/share/applications
-1-to-1_assistance.html         /usr/share/antiX/FAQ 
-1-to-1_assistance              /usr/share/antiX/FAQ/images
