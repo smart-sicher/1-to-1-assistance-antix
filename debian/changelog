@@ -1,3 +1,9 @@
+1-to-1-assistance-antix (1.3.0) unstable; urgency=medium
+
+  * changed in control - arandr dependency corrected
+
+ -- Aika_Sumeragi <http://aika.bplaced.net>  Tue, 14 Jan 2025 19:35:00 +0200
+
 1-to-1-assistance-antix (1.2.9) unstable; urgency=medium
 
   * 1-to-1_assistance_receive.sh, .1-to-1_assistance_receive_rc, 1-to-1_assistance_provide.sh changed
