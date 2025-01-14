@@ -111,7 +111,7 @@ Please use the key combination "Ctrl+Alt+Backspace", if you are trapped in full 
 \
 INFO: \
 For a successful vnc reverse connection, “Reverse Connection” must be activated in Vinagre. \
-Under  Removed -> Reversed connections -> Connection \
+Under "Removed -> Reversed connections -> Connection" \
 you will also find your public IP for the assistance receiver. '
 
 
