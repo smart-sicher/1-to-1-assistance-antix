@@ -69,8 +69,8 @@ Environment:
    
 Requires:
    1-to-1_assistance_receive.sh, 1-to-1_assistance_provide.sh
-   yad, vinagre, x11vnc, stunnel4, bash, grep, lxrandr, x11-xserver-utils
-   
+   vinagre, x11vnc, stunnel4, bash, grep, arandr, yad, coreutils, x11-xserver-utils
+
 References:
    Aika Sumeragi
    https://gitlab.com/Aika_Sumeragi/1-to-1-assistance-antix
