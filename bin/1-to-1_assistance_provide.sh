@@ -5,7 +5,7 @@
 PROGNAME=${0##*/}
 
 # Set the version number
-PROGVERSION=1.2
+PROGVERSION=1.3
 
 
 
