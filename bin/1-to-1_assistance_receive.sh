@@ -4,7 +4,7 @@
 PROGNAME=${0##*/}
 
 # Set the version number
-PROGVERSION=1.2
+PROGVERSION=1.3
 
 
 
@@ -167,7 +167,7 @@ if [[ "$DESKTOP_SIZE_MODE" = "resize" ]]; then
 # Create from the captured settings those to use in the session
    SEARCH="--mode ????x???? "
    SUBSTITUTE="--mode 1280x720 "
-   DESKTOP_IN_SESSION=$($DESKTOP_ANTE_SESSION $SEARCH $SUBSTITUTE)
+   DESKTOP_IN_SESSION="$($DESKTOP_ANTE_SESSION $SEARCH $SUBSTITUTE)"
 fi
 
 
@@ -220,7 +220,7 @@ do
    x11vnc -rc $CONFIG -connect_or_exit $PROVIDER_ADDRESS -rfbauth ~/.vnc/passwd -o $LOG
    
    # Pause to enable the log to be updated, then check whether connection was successfully established
-   sleep 3
+   sleep 30
    SSL_CONNECTION_STATUS=$(grep "SSL_connect() succeeded" $LOG)
    
    # When the conection request was successful
@@ -308,24 +308,14 @@ if [[ "$DESKTOP_SIZE_MODE" = "resize" ]]; then
 
    # Resize the desktop    
    $DESKTOP_IN_SESSION 2>/dev/null
-fi
-   
-
-
-# -----------------------------
-# Desktop geometry post session
-# -----------------------------
-
-# When the desktop was resized for the duration of the session
-if [[ "$DESKTOP_SIZE_MODE" = "resize" ]]; then
 
    # Wait for the session to be closed
    while [[ "$SESSION_STATUS_CLOSED" = "" ]]
    do
-         sleep 2
+         sleep 3
          
          # Check whether the session has finished
-         SESSION_STATUS_CLOSED=$(tail $LOG | grep "killing gui_pid")
+         SESSION_STATUS_CLOSED=$(tail $LOG | grep "viewer exited")
    done
    
    # Restore the pre-session desktop settings
