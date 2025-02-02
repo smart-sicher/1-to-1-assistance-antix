@@ -106,10 +106,10 @@ MESSAGE_1="\n X11VNC-server screen resolution? \
            \n This will not change your own screen resolution. \
            \n \
            \n 1. 1280x720 \
-           \n 1280x720 fits completely on the provider's desktop. \
+           \n 1280x720 fits completely on the provider desktop. \
            \n \
            \n 2. 1360x768 \
-           \n 1360x768 might be too big for the Provider. \
+           \n 1360x768 might be too big for the provider. \
            \n \
            \n 3. screen resolution not adjusted \
            \n 1280x720 is selected via timeout. \
