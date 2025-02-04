@@ -1,0 +1,233 @@
+
+In order to share our desktop session with VNC, an activated VNC server is a basic requirement. 1-to-1 Assistance uses the X11VNC program for this. For normal (forward-) VNC-connections, the help recipient must also know their public IP and allow/permit incoming connections on port 5900 in the firewall or router.
+You can find out your own public IP using this terminal command:
+=> wget -4 -O - -q icanhazip.com
+TCP port 5900 can be allowed in the ufw firewall using the following terminal command:
+=> sudo ufw allow 5900/tcp
+
+Router and firewall settings can overwhelm inexperienced Linux users, SSL connections require additional SSL port 22 to be allowed. 1-to-1 Assistance simplifies this using reverse VNC with port 5500 without allowing incoming connections on the VNC server standard port.
+However it is dangerous to run X11VNC without a password,
+1-to-1 Assistance starts X11VNC with a password option.
+
+Tool 1-to-1-Assistance ...
+- starts the X11VNC-server for the help recipient
+- starts the Vinagre-VNC-viewer for the help provider
+- adds simple password protection
+- avoids additional firewall and router sharing settings
+- prevents misunderstandings when using Vinagre
+
+ 
+
+What is 1 to 1 Assistance?
+
+1-to-1 Assistance is the simplest way to share the desktop of a Linux PC
+with another system privately via Reverse-VNC.
+
+A system can take on two roles:
+
+a) receive Linux help from someone else
+
+b) offer Linux help to someone else
+
+The help recipient allows their local desktop to be shared
+and the help provider can then view this system and usually also operate it remotely.
+Both the recipient and the provider see the same desktop on their screens.
+
+To exchange IP and password, the help recipient and help provider
+contact each other via the Internet or telephone. The help provider
+can operate the desktop of the recipient system, even if it is on
+the other side of the world or in the same room.
+
+ 
+
+ 
+Typical Use Case:
+
+A Linux-user asks someone with the necessary expertise for help.
+Together they agree that the best way to demonstrate and troubleshoot
+the problem is to share the user's desktop via VNC.
+Scenario Private Session via the Internet
+
+- The help-receiver system is behind a local router that the
+  user cannot or does not want to configure.
+
+- The help-receiver system have a running a firewall that the
+  user does not want to configure.
+
+- The local router from help-provider system forwards the
+  required ports. If a firewall is running on the provider system,
+  it allows connections to the forwarded ports.
+  
+
+ 
+
+RECEIVE ASSISTANCE:
+
+Security Measures
+
+    The assistance seeker secures their X11VNC desktop share with a
+    password. The assistance provider needs this password for the connection.
+
+ 
+Pre-Connection Requirements
+
+    The provider system is listening for a connection
+
+    The provider system operator has supplied you the IP address to contact
+
+ 
+
+
+Starting Receive Assistance
+
+From the system menu select => 1-to-1 Assistance
+ 
+
+A window opens asking which mode is wanted.
+
+select mode => Receive - press the Provide button
+
+If a buton is not pressed, Receive is automatically started after a timeout 
+
+ 
+
+A window opens asking whether to make your desktop fit within the provider desktop.
+
+select mode => 1360x768 for modern 16:9 screen
+select mode => 1024x768 for older 4:3 screen
+
+If a button is not pressed, 1360x768 is automatically started after a timeout 
+
+ 
+
+A window opens asking what VNC password to contact
+
+insert => password
+
+Enter the password supplied by the provider system operator
+ 
+
+ 
+
+A window opens asking what IP address to contact
+
+insert => ip address (from help provider)
+
+Enter the IP Address supplied by the provider system operator
+
+ 
+
+ 
+
+To indicate your desktop is being shared an icon is displayed in the taskbar
+
+( Refer to section "Fine Tuning" for an alternative to an icon in the taskbar )
+
+ 
+Stopping Receive Assistance
+
+Click on the X11VNC icon in the taskbar to display a popup menu
+
+Select Stop x11vnc to close the session and the connection
+
+ 
+
+ 
+
+ 
+
+PROVIDE ASSISTANCE:
+
+Security Measures
+
+Use the key combination "Ctrl+Alt+Backspace", if you are trapped in full screen mode.
+Close full screen mode with F11 only works if local keyboard shortcuts under View in Vinagre are activated.
+
+ 
+Pre-Connection Requirements
+
+- Your local network firewall/router forwards ports to the provider system
+- 5500 which is used to listen for a session request from the receiver system
+- 5900 which is used to share the desktop of the receiver system
+
+- You have started provider mode before the receiver system requests a connection
+- You have supplied the receiver system operator your external IP address
+
+"Note"
+Each router handles port forwarding in its own way, this means there is no single description that can cover all variations. You should refer to the user manual to do the setting up.
+
+"Tip"
+If you are connecting via a local network rather than the internet,
+there is no need to forward any ports to the provider system.
+
+
+IP Address
+
+Reverse VNC connections are often necessary to bypass router or firewall restrictions that block incoming connections.
+To share the help seeker's desktop over the Internet, 1-to-1-assistance-antix needs the help provider's public external IP address.
+This is different from the internal IP address used on the local network.
+
+The public external IP address is usually assigned by the Internet provider, it can be dynamic and change without affecting Internet access.
+
+Vinagre determines the helper's public external IP address automatically.
+Alternatively, one can open a web browser and enter: https://whatismyip.com
+
+As a helper, you pass this IP address on to the help seeker by phone or email.
+
+ 
+
+ 
+Starting Provide Assistance
+
+From the system menu select => 1-to-1 Assistance 
+
+ 
+
+A window opens asking which mode is wanted.
+
+select mode => Provide - press the Provide button
+ 
+
+ 
+
+When you start the deployment mode, a window opens warning for Vinagre's full-screen mode.
+
+press the button => gtk-close
+ 
+
+ 
+
+After Vinagre has started, activate reverse connections there and find your public Internet IP.
+
+The assistance seeker at the X11vnc remote station requires this IP address.
+
+ 
+
+ 
+
+CONFIGURATION AND LOG FILES:
+
+VNC password are located in
+/home/USERNAME/.vnc/passwd
+
+Receive configuration file is located in
+/home/USERNAME/.1-to-1_assistance_receive_rc
+
+Receive log file is located in
+/home/USERNAME/.1-to-1_assistance_receive.log
+
+Provide configuration file is located in
+/home/USERNAME/.vnc/profiles/1-to-1_assistance_provide.vnc
+
+SSL security certificates are located in
+/home/USERNAME/.vnc/certs/
+
+
+Menu file is located in
+/usr/share/applications/antix/1-to-1_assistance.desktop
+
+ 
+
+ 
+Version: 1.3.0 last updated 2025-02-04
+
