@@ -1,0 +1,46 @@
+#
+# This file is based on the current x11vnc settings and can be used as
+# as a ~/.x11vncrc defaults file.  If saved to another filename, these
+# settings can be passed to x11vnc at startup via "-rc <filename>".
+#
+# The rc file comment character is "#".  Use "\#" for the literal char.
+# You can continue lines using "\" as the last character of a line.
+#
+# Lines beginning with "#d" indicate the parameter value is at its default
+# setting and you probably want to leave it commented out.
+#
+# Lines beginning with "#?" indicate parameters you probably do not
+# want to hardwire to the current setting (uncomment if you want that).
+# 
+# Some parameters are boolean, e.g. -forever, and take no value; while
+# the others, e.g. -wait 50, take a string or numerical value.
+#
+# For booleans, the line will end with comment "default: on" or
+# "default: off" indicating the default setting.  (Note: often
+# "-nofoobar" corresponds to option "-foobar" and the former is
+# "the default", e.g. -norepeat).
+#
+# For string or numerical options, the value "" in a line below
+# means the default is unset and you will need to supply some non-empty
+# value to use the parameter.  For reference, if the default differs
+# from your value it placed at the end of the line as a comment.
+# 
+# Feel free to uncomment or comment any of the lines or to change any
+# of the values of the parameters.  Don't be surprised that most if not
+# all of the lines below are commented out (x11vnc has so many parameters,
+# most of them will be at their default values).
+#-------------------------------------------------------------------------
+
+# -gui icon=minimal,iconfont=5x8,geom=24x10+0-0
+# -gui tray,ez			# -gui [gui-opts] "gui-opts" can be a comma separated for a "tray" or "icon" mode
+-gui tray
+-accept popup			# ensure the session is explicity accepted or refused by the user
+-rfbport 0			# disable listening (listening not wanted in reverse mode using connect_or_exit)
+# -ultrafilexfer			# enable file transfer
+# -ssl				# ensure ssl is used to encrypt the connection
+# -sslonly			# ensure only standard ssl tunneling is used
+# -ssldir ""
+# -stunnel			# default: off
+# -viewonly			# default: off
+# -xrandr			# default: off
+# -xrefresh ""			# default: 0.00
